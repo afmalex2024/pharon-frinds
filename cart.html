@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible=IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة التسوق</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>سلة التسوق</h1>
+    </header>
+    <main>
+        <div id="cart-items-container"></div>
+        <p id="cart-total"></p>
+        <button onclick="goBackToProducts()" class="back-button">الرجوع إلى الموقع الأصلي</button>
+    </main>
+    <script>
+        // دالة لعرض المنتجات الموجودة في سلة التسوق
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let total = 0;
+
+            cartItemsContainer.innerHTML = ''; // مسح المحتويات القديمة
+
+            cart.forEach((item, index) => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" style="width: 100px; margin-right: 10px;">
+                    <span>${item.name} - $${item.price}</span>
+                    <button onclick="removeFromCart(${index})">حذف</button>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+                total += item.price;
+            });
+
+            document.getElementById('cart-total').textContent = `المجموع الكلي: $${total}`;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>السلة فارغة.</p>';
+            }
+        }
+
+        // دالة للرجوع إلى الموقع الأصلي
+        function goBackToProducts() {
+            window.location.href = 'index.html'; // قم بتغيير هذا إلى اسم ملف الصفحة الرئيسية إذا كان مختلفًا
+        }
+
+        // عرض سلة التسوق عند تحميل الصفحة
+        window.onload = displayCartItems;
+    </script>
+    <script src="script.js"></script> <!-- إضافة script.js للتعامل مع دالة removeFromCart -->
+</body>
+</html>
