@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHARON FRINDS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="DALL·E 2024-10-09 00.48.19 - A logo design for an Egyptian antique store, featuring elements inspired by ancient Egyptian art. The design should include hieroglyphic-like symbols,.webp" alt="شعار الموقع" class="header-logo">
+            <h1 class="site-title">PHARON FRINDS  </h1>
+            <div class="header-actions">
+                <input type="text" id="searchInput" placeholder="ابحث هنا..." />
+                <button onclick="searchProducts()">بحث</button>
+                <span id="visitCount">عدد الزيارات: 0</span>
+            </div>
+            <button onclick="viewCart()">عرض سلة التسوق</button>
+            <button onclick="viewrej()">Register</button>
+           
+        </div>
+       
+       
+       
+       
+        
+    </header>
+    <main>
+        <div class="product-list">
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/1.jpeg" alt="مرايا فرعونية" onclick="openModal()" >
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/1.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/2.jpeg" alt="مرايا فرعونية" onclick="openModal()" >
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/2.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/3.jpeg" alt="مرايا فرعونية" onclick="openModal()" >
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/3.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/4.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/4.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/5.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/5.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/6.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/6.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/7.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/7.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/8.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/8.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/9.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/9.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/10.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/10.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/11.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/11.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/12.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/12.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/13.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/13.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>مرايا فرعونية</h2>
+                <img src="photo/14.jpeg" alt="مرايا فرعونية">
+                <p>مرايا فرعونية.</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('مرايا فرعونية', 'photo/14.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/15.jpeg" alt="ورق بردى ">
+                <p>ورق بردى .</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('ورق بردى ', 'photo/15.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+            
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/16.jpeg" alt="ورق بردى ">
+                <p>ورق بردى .</p>
+                <p>السعر: $100</p>
+                <button onclick="addToCart('ورق بردى ', 'photo/16.jpeg', 100)">إضافة إلى السلة</button>
+            </div>
+
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/17.jpeg" alt="صورة المنتج 2">
+                <p>ورق بردى .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart('ورق بردى  ','photo/17.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/18.jpeg" alt="صورة المنتج 2">
+                <p>ورق بردى .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart('ورق بردى   ','photo/18.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/19.jpeg" alt="صورة المنتج 2">
+                <p>ورق بردى .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart('ورق بردى   ','photo/19.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/20.jpeg" alt="صورة المنتج 2">
+                <p>  ورق بردى  .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart('ورق بردى   ','photo/20.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+            <div class="product">
+                <h2>ورق بردى </h2>
+                <img src="photo/21.jpeg" alt="صورة المنتج 2">
+                <p>ورق بردى .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart(' ورق بردى ','photo/21.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+           
+            <div class="product">
+                <h2>شنطة فرعونية </h2>
+                <img src="photo/30.jpeg" alt="صورة المنتج 2">
+                <p>    شنط فرعونية .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart(' شنط فرعونية   ','photo/30.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+            <div class="product">
+                <h2>شنطة فرعونية </h2>
+                <img src="photo/31.jpeg" alt="صورة المنتج 2">
+                <p>شنط فرعونية .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart(' شنط فرعونية ','photo/31.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+            <div class="product">
+                <h2>شنطة فرعونية </h2>
+                <img src="photo/32.jpeg" alt="صورة المنتج 2">
+                <p>  شنط فرعونية  .</p>
+                <p>السعر: $150</p>
+                <button onclick="addToCart(' شنط فرعونية ','photo/32.jpeg', 150)">إضافة إلى السلة</button>
+            </div>
+        </div>
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    
+    
+    </main>
+    <script src="script.js"></script>
+  
+</body>
+</html>
