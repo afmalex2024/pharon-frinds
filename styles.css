@@ -10,7 +10,10 @@ header {
 .header-content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
 }
+
 
 .header-logo {
     width: 70px; /* تعديل حجم الشعار حسب الحاجة */
